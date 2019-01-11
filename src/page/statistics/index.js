@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react'
 import { Grid, Card } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 
-import favourite from 'data/docusList'
+import favourite from 'data/favourite'
 import { Loading } from 'components'
 const Components = [lazy(() => import('./components/Bar')), lazy(() => import('./components/Map'))]
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Grid } from '@material-ui/core'
 
 import { Module, List, Setting } from './components'
-import favourite from 'data/docusList'
+import favourite from 'data/favourite'
 import { sortBy, useToggle, useInput } from 'utils'
 
 const moduleLayout = {
