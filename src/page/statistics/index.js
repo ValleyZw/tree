@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/styles'
 
 import favourite from 'data/favourite'
 import { Loading } from 'components'
+import { useTitle } from 'utils'
+
 const Components = [lazy(() => import('./components/Bar')), lazy(() => import('./components/Map'))]
 
 const useStyles = makeStyles(theme => ({
@@ -26,6 +28,7 @@ const moduleLayout = {
 
 function Statistics () {
   const classes = useStyles()
+  useTitle('Statistics | Valley');
 
   return (
     <Grid container spacing={32}>

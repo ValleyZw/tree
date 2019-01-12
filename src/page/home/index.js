@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core'
 
 import { Module, List, Setting } from './components'
 import favourite from 'data/favourite'
-import { sortBy, useToggle, useInput } from 'utils'
+import { sortBy, useToggle, useInput, useTitle } from 'utils'
 
 const moduleLayout = {
   xs: 12,
@@ -25,6 +25,7 @@ function Home () {
   const [sortValue, setLSortValue] = useState('')
   const {toggle, setToggle} = useToggle()
   const [searchValue, setSearchValue] = useInput()
+  useTitle('Documentaries | Valley');
 
   const props = {
     toggle,

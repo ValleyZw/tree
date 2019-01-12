@@ -1,6 +1,8 @@
 import React from 'react'
 import { DiscussionEmbed } from 'disqus-react'
 
+import { useTitle } from 'utils'
+
 const discussionConfig = {
   shortname: 'docus-valleyease',
   config: {
@@ -10,6 +12,11 @@ const discussionConfig = {
   }
 }
 
-const Comment = () => <DiscussionEmbed {...discussionConfig}/>
+function Comment(){
+  useTitle('Comment | Valley');
+  return(
+    <DiscussionEmbed {...discussionConfig}/>
+  )
+}
 
 export default Comment

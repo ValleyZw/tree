@@ -1,9 +1,15 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 
 /**
  * custom hooks
  * @url https://reactjs.org/docs/hooks-custom.html
  */
+export const useTitle = (title = 'Valley') => {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+};
+
 export const useToggle = (initial = false) => {
   const [toggle, setValue] = useState(initial)
   const setToggle = useCallback(() => setValue(v => !v), [])
