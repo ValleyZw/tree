@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { IconButton, Divider, List, Drawer, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
@@ -11,32 +11,38 @@ import {
   Comment,
 } from '@material-ui/icons'
 
-const mainMenus = [
-  {
-    children: <Movie/>,
-    label: 'Documentaries',
-    route: '/'
-  },
-  {
-    children: <BarChart/>,
-    label: 'Statistics',
-    route: '/statistics'
-  },
+/**
+ * menus
+ * @type {Array}
+ * @value [0: mainMenu, 1: sideMenu]
+ */
+const menus = [
+  [
+    {
+      children: <Movie/>,
+      label: 'Documentaries',
+      route: '/'
+    },
+    {
+      children: <BarChart/>,
+      label: 'Statistics',
+      route: '/statistics'
+    }
+  ],
+  [
+    {
+      children: <Comment/>,
+      label: 'Comment',
+      route: '/comment'
+    }
+  ]
 ]
 
-const sideMenus = [
-  {
-    children: <Comment/>,
-    label: 'Comment',
-    route: '/comment'
-  }
-]
-
-const Menus = ({menus}) => (
+const Menus = ({menus, toggle}) => (
   <>
     {menus.map(menu => (
         <Link to={menu.route} key={menu.label} style={{textDecoration: 'none'}}>
-          <ListItem button>
+          <ListItem button onClick={toggle}>
             <ListItemIcon>
               {menu.children}
             </ListItemIcon>
@@ -98,15 +104,17 @@ function DrawerChild ({toggle, setToggle}) {
     >
       <div className={classes.toolbar}>
         {
-          toggle && <IconButton onClick={setToggle}>
+          toggle && <IconButton aria-label="Close drawer" onClick={setToggle}>
             <ChevronLeft/>
           </IconButton>
         }
       </div>
-      <Divider/>
-      <List><Menus menus={mainMenus}/></List>
-      <Divider/>
-      <List><Menus menus={sideMenus}/></List>
+      {menus.map((value, key) => (
+        <Fragment key={key}>
+          <Divider/>
+          <List component="nav"><Menus menus={value} toggle={setToggle}/></List>
+        </Fragment>
+      ))}
     </Drawer>
   )
 }

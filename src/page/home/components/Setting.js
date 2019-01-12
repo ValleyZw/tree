@@ -91,14 +91,14 @@ function Setting ({toggle, setToggle, searchValue, setSearchValue, setLSortValue
 
   return (
     <ExpansionPanel className={classes.content}>
-      <ExpansionPanelSummary expandIcon={<ExpandMore/>}>
+      <ExpansionPanelSummary aria-label="Toggle setting" expandIcon={<ExpandMore/>}>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
 
-        <IconButton onClick={setToggle}>
+        <IconButton aria-label="Toggle layout" onClick={setToggle}>
           {toggle ? <ViewList fontSize="small"/> : <ViewModule fontSize="small"/>}
         </IconButton>
-        <IconButton onClick={setTarget}>
+        <IconButton aria-label="Toggle sorted" onClick={setTarget}>
           <Sort fontSize="small"/>
         </IconButton>
 
