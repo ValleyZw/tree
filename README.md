@@ -2,6 +2,10 @@ Top 100 Documentaries App with [Create React App](https://github.com/facebook/cr
 
 ## Overview
 
+<p align='center'>
+<img src='https://github.com/ValleyZw/tree/blob/master/static/Tree.jpeg' width='600' alt='App Overview'>
+</p>
+
 ## Project structure
 
 ```bash
