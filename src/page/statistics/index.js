@@ -31,7 +31,7 @@ function Statistics () {
   useTitle('Statistics | Valley');
 
   return (
-    <Grid container spacing={32}>
+    <Grid container spacing={4}>
       {Components.map((Component, index) =>
         <Grid key={index} item {...moduleLayout}>
           <Card className={classes.card}>

@@ -41,7 +41,7 @@ function Home () {
   return (
     <>
       <Setting {...props}/>
-      <Grid container spacing={32}>
+      <Grid container spacing={4}>
         {documentaries.map((documentary, key) => (
           <Grid item key={key} {...layout}>
             {toggle ? <List {...documentary}/> : <Module {...documentary}/>}

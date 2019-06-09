@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center'
   },
   progress: {
-    margin: theme.spacing.unit * 2,
+    margin: theme.spacing(2),
     color: (theme.palette.type === 'dark') ? '#fbfbfb' : '#333333',
   },
 }))

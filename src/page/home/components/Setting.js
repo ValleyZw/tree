@@ -21,7 +21,10 @@ const useStyles = makeStyles(theme => ({
   content: {
     backgroundColor: 'transparent',
     boxShadow: 'none',
-    marginTop: theme.spacing.unit * -3,
+    marginTop: theme.spacing(-3),
+  },
+  summary: {
+    marginTop: theme.spacing(-3),
   },
   grow: {
     flexGrow: 1,
@@ -37,12 +40,12 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 0,
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing.unit,
+      marginLeft: theme.spacing(1),
       width: 'auto',
     },
   },
   searchIcon: {
-    width: theme.spacing.unit * 8,
+    width: theme.spacing(8),
     height: '100%',
     position: 'absolute',
     pointerEvents: 'none',
@@ -56,7 +59,7 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
   },
   inputInput: {
-    paddingLeft: theme.spacing.unit * 8,
+    paddingLeft: theme.spacing(8),
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
@@ -91,7 +94,7 @@ function Setting ({toggle, setToggle, searchValue, setSearchValue, setLSortValue
 
   return (
     <ExpansionPanel className={classes.content}>
-      <ExpansionPanelSummary aria-label="Toggle setting" expandIcon={<ExpandMore/>}>
+      <ExpansionPanelSummary aria-label="Toggle setting" expandIcon={<ExpandMore/>} className={classes.summary}>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
 

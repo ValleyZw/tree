@@ -1,4 +1,3 @@
-import './bootstrap'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createMuiTheme } from '@material-ui/core/styles'
@@ -9,9 +8,6 @@ import App from './page/App'
 import * as serviceWorker from './serviceWorker'
 
 const theme = createMuiTheme({
-  typography: {
-    useNextVariants: true,
-  },
   palette: {
     type: 'dark',
   },

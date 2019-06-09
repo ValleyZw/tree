@@ -45,8 +45,8 @@ const useStyles = makeStyles(theme => ({
   controls: {
     display: 'flex',
     alignItems: 'center',
-    paddingLeft: theme.spacing.unit * 4,
-    paddingBottom: theme.spacing.unit,
+    paddingLeft: theme.spacing(4),
+    paddingBottom: theme.spacing(1),
   },
   cardLink: {
     textDecoration: 'none',

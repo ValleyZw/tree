@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     overflowY: 'auto',
     backgroundColor: (theme.palette.type === 'dark') ? '#191919' : '#fafafa',
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing(3),
   },
   toolbar: {
     display: 'flex',

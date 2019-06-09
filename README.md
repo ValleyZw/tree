@@ -10,8 +10,8 @@ Top 100 Documentaries App with [Create React App](https://github.com/facebook/cr
 
 ```bash
 tree
-  ├── .env                     Environment variables configuration
   ├── .gitignore               git ignore configuration
+  ├── jsconfig.json            baseUrl configuration
   ├── README.md                Documentation
   ├── package.json             npm configuration
   ├── public/                  public resources folder
@@ -20,7 +20,6 @@ tree
        ├── data/               Public data folder
        ├── page/               React routes folder
        ├── utils/              Helper functions folder
-       ├── bootstrap.js        Material-UI stytle initialization
        ├── index.css           Global style
        ├── index.js            Main js file
        └── serviceWorker.js    Service worker configuration

@@ -41,7 +41,7 @@ const menus = [
 const Menus = ({menus, toggle}) => (
   <>
     {menus.map(menu => (
-        <Link to={menu.route} key={menu.label} style={{textDecoration: 'none'}}>
+        <Link to={menu.route} key={menu.label} style={{textDecoration: 'none', color: '#fafafa'}}>
           <ListItem button onClick={toggle}>
             <ListItemIcon>
               {menu.children}
